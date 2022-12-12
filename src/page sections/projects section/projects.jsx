@@ -7,7 +7,7 @@ import dribble_icon from "../../images/dribble.png";
 import github_icon from "../../images/github.png";
 import Button from "../../components/button/button";
 import "./style.scss";
-const ProjectsSection = ({ project, projectSticky}) => {
+const ProjectsSection = ({ project, projectSticky }) => {
   return (
     <>
       <section className="project_section">
@@ -23,13 +23,13 @@ const ProjectsSection = ({ project, projectSticky}) => {
               fontWeight="300"
               className="normal_text"
             >
-              Easily setup context API with custom hooks in react
+              Easily setup context API with custom hooks in React
             </NormalText>
             <Button btn_text="View package" className="view_package_btn" />
           </div>
         </div>
 
-        <div className="wrote_a_book_on_tech_container">
+        {/* <div className="wrote_a_book_on_tech_container">
           <img src={project_image_2} className="image" />
           <div className="text">
             <NormalText color="#FFFFFF" className="text_header">
@@ -48,15 +48,34 @@ const ProjectsSection = ({ project, projectSticky}) => {
               className="download_a_copy_btn"
             />
           </div>
+        </div> */}
+
+        <div className="crash-course-container">
+          <NormalText color="#FFFFFF" className="text_header">
+            My Web development crash course.
+          </NormalText>
+          <iframe
+            width="560"
+            height="315"
+            className="crash-course"
+            src="https://www.youtube.com/embed/oQ_mk67vxA4"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
         </div>
 
         <NormalText
           color=" #FFFFFF"
-          fontWeight="500"
+          fontWeight="300"
           className="im_allowed_to_show"
         >
-          I’m allowed to show a limited number of projects because of policies
-          from diffferent companies. Here are a few projects though:
+          I've worked at different companies across differernt timezones in the
+          US, UK, Germany, etc. I’m allowed to show a limited number of projects
+          because of policies from diffferent companies. Most recently
+          was <a href="https://studio.samlabs.com">SAMLabs</a>. <br /> Resume available
+          on request. These are a few personal design wild ideas:
         </NormalText>
 
         <div className="project_interface_container">
@@ -85,10 +104,7 @@ const ProjectsSection = ({ project, projectSticky}) => {
           })}
         </div>
 
-        <div
-          className="where_to_find_more_things_that_i_have_done"
-         
-        >
+        <div className="where_to_find_more_things_that_i_have_done">
           <NormalText
             className="where_to_find_text"
             color="#FFFFFF"

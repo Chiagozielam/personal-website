@@ -18,8 +18,10 @@ const Connect = ({ contact, contactSticky }) => {
           className="connect_text"
           color=" #FFFFFF"
         >
-          I’m open to opportunities around Devrel/advocacy and software
-          engineering roles Let’s talk on any of these socials
+          I’m open to opportunities around Frontend software engineering and
+          Devrel/advocacy roles. Let’s talk via mail{" "}
+          <a href="mailto: iamdanieldon@gmail.com">@iamdanieldon@gmail.com</a>{" "}
+          or any of these socials
         </NormalText>
 
         <div className="linkin_and_twitter_icon">

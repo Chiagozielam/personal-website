@@ -1,8 +1,9 @@
 import Button from "../components/button/button";
 import NormalText from "../components/normal_text/normal_text";
 import hand from "../images/hand.png";
-import profile_image from "../images/profile_picture.png";
-import Header from "../components/header/header";
+// import profile_image from "../images/profile_picture.png";
+import main_profile_img from "../images/profile_img.jpg";
+// import Header from "../components/header/header";
 import "./style.scss";
 import "antd/dist/antd.css";
 
@@ -60,7 +61,8 @@ const LandingPage = () => {
               <h2 className="text_header">Hey, You’ve entered Daniel’s den</h2>
 
               <NormalText className="i_write_code">
-                I write code, create things, and talk too much
+                I write code, create things, and help others do the previous
+                things I just mentioned.
               </NormalText>
               <div className="see_myworks_container">
                 <div className="see_myworks_sub_container">
@@ -117,7 +119,7 @@ const LandingPage = () => {
                 />
               </svg>
 
-              <img src={profile_image} className="profile_image" />
+              <img src={main_profile_img} className="profile_image" />
               <svg
                 className="triangle_icon"
                 width="69"
