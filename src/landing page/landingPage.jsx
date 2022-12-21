@@ -123,7 +123,7 @@ const LandingPage = () => {
               <div className="see_myworks_container">
                 <div className="see_myworks_sub_container">
                   <NormalText className="see_myworks_text">
-                    I’ve found love in helping other people impeove, and I do
+                    I’ve found love in helping other people improve, and I do
                     that through writing, organising classes, and creating
                     videos.
                   </NormalText>
