@@ -53,10 +53,66 @@ const LandingPage = () => {
   return (
     <BrowserRouter>
       <div className="main_container">
-        <section className=" introduction_section">
-          <div className=" introduction_section_sub_container">
+        <section className="introduction_section">
+          <div className="color_box_container"></div>
+          <div className="introduction_section_sub_container">
             <div className="text_container">
               <div className="line"></div>
+              <div className="image_container mobile_img_container">
+                {/* Profile image container */}
+                <svg
+                  className="square_icon"
+                  width="55"
+                  height="55"
+                  viewBox="0 0 55 55"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <rect
+                    x="2.04904"
+                    y="20.549"
+                    width="37"
+                    height="37"
+                    transform="rotate(-30 2.04904 20.549)"
+                    fill="#FF5C00"
+                    stroke="white"
+                    stroke-width="3"
+                  />
+                </svg>
+
+                <svg
+                  className="circle_icon"
+                  width="92"
+                  height="92"
+                  viewBox="0 0 92 92"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <circle
+                    cx="46"
+                    cy="46"
+                    r="43.5"
+                    stroke="#EB6300"
+                    stroke-width="5"
+                  />
+                </svg>
+
+                <img src={main_profile_img} className="profile_image" />
+                <svg
+                  className="triangle_icon"
+                  width="69"
+                  height="60"
+                  viewBox="0 0 69 60"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M4.62212 56.75L34.5 5L64.3779 56.75H4.62212Z"
+                    stroke="#8EFE00"
+                    stroke-width="5"
+                  />
+                </svg>
+              </div>
               <img src={hand} className="hand_image" />
               <h2 className="text_header">Hey, You’ve entered Daniel’s den</h2>
 
@@ -75,12 +131,11 @@ const LandingPage = () => {
                     btn_text="See my Works"
                     className="see_my_works_btn"
                   />
-                  <span id="variety"></span>
                 </div>
               </div>
             </div>
 
-            <div className="image_container">
+            <div className="image_container desktop_img_container">
               {/* Profile image container */}
               <svg
                 className="square_icon"

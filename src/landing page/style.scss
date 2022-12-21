@@ -31,16 +31,21 @@
     background-color: #1d1c1c;
 
     .introduction_section {
+      height: 100%;
       width: 100%;
-      height: 704px;
       padding-top: 140px;
-      background-color: #101115;
-
+      .color_box_container {
+        height: 704px;
+        width: 100%;
+        background-color: #101115;
+        position: absolute;
+        top: 0;
+      }
       .introduction_section_sub_container {
         width: 75%;
         margin: 0 auto;
-
         display: flex;
+        position: relative;
         justify-content: space-between;
         .text_container {
           width: 45%;
@@ -83,7 +88,6 @@
               width: 372px;
               height: 283px;
               margin: 0 auto;
-
               border: 1px solid #898989;
               box-sizing: border-box;
               border-radius: 10px;
@@ -107,6 +111,9 @@
               }
             }
           }
+        }
+        .mobile_img_container{
+          display: none;
         }
         .image_container {
           width: 459px;
@@ -157,14 +164,13 @@
 
       .introduction_section {
         width: 100%;
-        height: 557px;
         padding-top: 79px;
 
         .introduction_section_sub_container {
           width: 85%;
           margin: 0 auto;
 
-          display: flex;
+          // display: flex;
           justify-content: space-between;
           .text_container {
             width: 30%;
@@ -225,22 +231,23 @@
 
       .introduction_section {
         width: 100%;
-        height: 860px;
         padding-top: 50px;
 
+      .color_box_container {
+        height: 845px;
+      }
         .introduction_section_sub_container {
           width: 85%;
           margin: 0 auto;
-
           display: block;
           .text_container {
             width: 100%;
             .line {
               width: 50%;
-              margin-bottom: 300px;
             }
             .hand_image {
               margin: 10px 0px 15px 0px;
+              margin-top: 40px;
             }
             .text_header {
               font-size: 22px;
@@ -254,12 +261,12 @@
 
             .see_myworks_container {
               width: 100%;
-              height: 270px;
+              height: 240px;
 
               margin-top: 43px;
               .see_myworks_sub_container {
                 width: 93%;
-                height: 250px;
+                height: 215px;
                 margin: 0 auto;
 
                 border: 1px solid #898989;
@@ -284,14 +291,18 @@
               }
             }
           }
+          .mobile_img_container{
+            display: block;
+          }
+          .desktop_img_container{
+            display: none;
+          }
           .image_container {
             width: 250px;
-            padding-top: 60px;
+            padding-top: 40px;
             position: relative;
-            bottom: 845px;
 
             .square_icon {
-              position: absolute;
               top: 90px;
               left: -20px;
               width: 40px;
@@ -303,14 +314,12 @@
             }
 
             .circle_icon {
-              position: absolute;
               top: 170px;
               right: -25px;
               width: 50px;
             }
 
             .triangle_icon {
-              position: absolute;
               left: 80px;
               bottom: -25px;
               width: 40px;
