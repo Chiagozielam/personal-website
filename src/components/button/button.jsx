@@ -1,6 +1,12 @@
 import "./style.scss";
-const Button = ({ btn_text, className }) => {
-  return <button className={`button ${className}`}>{btn_text}</button>;
+const Button = ({ btn_text, className, href }) => {
+  return (
+    <button className={`button ${className}`}>
+      <a href={href} target="_blank">
+        {btn_text}
+      </a>
+    </button>
+  );
 };
 
 export default Button;

@@ -25,7 +25,11 @@ const ProjectsSection = ({ project, projectSticky }) => {
             >
               Easily setup context API with custom hooks in React
             </NormalText>
-            <Button btn_text="View package" className="view_package_btn" />
+            <Button
+              btn_text="View package"
+              className="view_package_btn"
+              href="https://www.npmjs.com/package/cra-template-contextapi-pwa"
+            />
           </div>
         </div>
 
@@ -73,9 +77,9 @@ const ProjectsSection = ({ project, projectSticky }) => {
         >
           I've worked at different companies across differernt timezones in the
           US, UK, Germany, etc. I’m allowed to show a limited number of projects
-          because of policies from diffferent companies. Most recently
-          was <a href="https://studio.samlabs.com">SAMLabs</a>. <br /> Resume available
-          on request. These are a few personal design wild ideas:
+          because of policies from diffferent companies. Most recently was{" "}
+          <a href="https://studio.samlabs.com">SAMLabs</a>. <br /> Resume
+          available on request. These are a few personal design wild ideas:
         </NormalText>
 
         <div className="project_interface_container">

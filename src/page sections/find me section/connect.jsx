@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import Header from "../../components/header/header";
 import NormalText from "../../components/normal_text/normal_text";
 import linkin_icon from "../../images/linkin.png";
@@ -21,9 +22,8 @@ const Connect = ({ contact, contactSticky }) => {
           I’m open to opportunities around Frontend software engineering and
           Devrel/advocacy roles. Let’s talk via mail{" "}
           <a href="mailto: iamdanieldon@gmail.com">@iamdanieldon@gmail.com</a>{" "}
-          or any of these socials
+          or any of these socials.
         </NormalText>
-
         <div className="linkin_and_twitter_icon">
           <a href="#">
             <img src={linkin_icon} className="icon" />
@@ -32,9 +32,7 @@ const Connect = ({ contact, contactSticky }) => {
             <img src={twitter_icon} className="icon" />
           </a>
         </div>
-
         <BackTop />
-
         <NormalText
           fontWeight="500"
           textAlign="center"
@@ -44,6 +42,7 @@ const Connect = ({ contact, contactSticky }) => {
         >
           Daniel Don
         </NormalText>
+        This is something I love to do alright??
       </section>
     </>
   );
