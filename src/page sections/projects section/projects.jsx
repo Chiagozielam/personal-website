@@ -107,25 +107,6 @@ const ProjectsSection = ({ project, projectSticky }) => {
             );
           })}
         </div>
-
-        <div className="where_to_find_more_things_that_i_have_done">
-          <NormalText
-            className="where_to_find_text"
-            color="#FFFFFF"
-            fontWeight="500"
-          >
-            Here’s where to find more things I’ve done:
-          </NormalText>
-
-          <div className="dribble_and_github_icons">
-            <a href="#">
-              <img src={dribble_icon} className="icon" />
-            </a>
-            <a href="#">
-              <img src={github_icon} className="icon" />
-            </a>
-          </div>
-        </div>
       </section>
     </>
   );
