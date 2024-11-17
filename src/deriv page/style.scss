@@ -1,0 +1,102 @@
+.deriv {
+  padding: 7%;
+  h1 {
+    font-size: 3rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    line-height: 110%;
+    width: 75%;
+    min-width: 360px;
+  }
+  .assurance {
+    font-size: 1.5rem;
+    color: rgb(53, 53, 53);
+    width: 80%;
+    margin-top: 5%;
+  }
+  .buy-btn {
+    background-color: orangered;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    padding: 1.2rem;
+    width: 20rem;
+    border-radius: 10px;
+    cursor: pointer;
+    &:hover {
+      background-color: rgb(205, 61, 9);
+    }
+  }
+  .cryp-container {
+    .info {
+      background-color: rgb(236, 190, 104);
+      font-size: 1.1rem;
+      width: 50%;
+      min-width: 300px;
+      padding: 3%;
+      border-radius: 20px;
+      border: 2px solid rgb(205, 144, 30);
+      margin-top: 2rem;
+    }
+    .wallet-info {
+      margin-top: 3rem;
+      .heading {
+        line-height: 0;
+      }
+      .flex-container {
+        display: flex;
+        gap: 2rem;
+        flex-wrap: wrap;
+        .flex-1 {
+          font-weight: 600;
+        }
+        .flex-2 {
+          button {
+            background-color: transparent;
+            padding: 0 0.5rem;
+            border: 1px solid black;
+            cursor: pointer;
+          }
+        }
+      }
+      .wallet-img {
+        width: 300px;
+        height: 100%;
+        display: block;
+      }
+      .proof-btn {
+        background-color: orangered;
+        border: none;
+        color: white;
+        font-size: 1rem;
+        padding: 1.2rem;
+        cursor: pointer;
+        margin-top: 1.5rem;
+        border-radius: 10px;
+        &:hover {
+          background-color: rgb(205, 61, 9);
+        }
+      }
+    }
+  }
+  @media screen and (max-width: "400px") {
+    h1{
+      font-size: 1.7rem;
+      padding-right: 15%;
+    }
+    .assurance{
+      font-size: 1rem;
+      width: 100%;
+    }
+    .wallet-info{
+      .flex-container{
+        #address-btn{
+          margin-top: -10%;
+        }
+      }
+      #network-heading{
+        margin-top: 1rem;
+      }
+    }
+  }
+}

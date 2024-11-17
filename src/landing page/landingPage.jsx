@@ -51,7 +51,7 @@ const LandingPage = () => {
   });
 
   return (
-    <BrowserRouter>
+    <>
       <div className="main_container">
         <section className="introduction_section">
           <div className="color_box_container"></div>
@@ -201,7 +201,7 @@ const LandingPage = () => {
         <ProjectsSection project={project} projectSticky={projectSticky} />
         <Connect contact={contact} contactSticky={contactSticky} />
       </div>
-    </BrowserRouter>
+    </>
   );
 };
 

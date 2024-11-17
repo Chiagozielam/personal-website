@@ -1,10 +1,23 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import LandingPage from "./landing page/landingPage";
+import DerivPage from "./deriv page/derivCoursePage";
+import { BrowserRouter, createBrowserRouter, RouterProvider } from 'react-router-dom';
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <LandingPage />,
+  },
+  {
+    path:"/deriv",
+    element: <DerivPage />
+  }
+]);
 
 ReactDOM.render(
   <React.StrictMode>
-    <LandingPage />
+    <RouterProvider router={router} />
   </React.StrictMode>,
   document.getElementById("root")
 );
