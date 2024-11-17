@@ -24,8 +24,12 @@ const DerivCoursePage = () => {
         It doesn't matter whether you've been unsuccessful for a very long time,
         if you follow what I'm about to teach you for a week, you'll message me
         on instagram and on the community with your positive results and profit
-        screenshots. To Join the exclusive community, send me your proof of
-        payment with the button at the bottom of the page. See you in class!
+        screenshots.
+      </p>
+      <p className="assurance-2">
+        To Join the exclusive community and participate in the upcoming live
+        session with Shamz on his secret spice appraoch, send me your proof of payment
+        with the button at the bottom of the page. See you in class!
       </p>
 
       <a href="https://selar.co/derivcashout">
