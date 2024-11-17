@@ -49,6 +49,15 @@ const DerivCoursePage = () => {
               <button onClick={() => onCopyText("address")}>Copy</button>
             </p>
           </div>
+          <p className="heading" id="network-heading">Amount:</p>
+          <div className="flex-container">
+            <p className="flex-1" id="amount">
+              $100
+            </p>
+            <p className="flex-2">
+              <button onClick={() => onCopyText("address")}>Copy</button>
+            </p>
+          </div>
           <p className="heading" id="network-heading">Network:</p>
           <div className="flex-container">
             <p className="flex-1" id="network">
