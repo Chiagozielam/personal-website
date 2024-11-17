@@ -24,7 +24,8 @@ const DerivCoursePage = () => {
         It doesn't matter whether you've been unsuccessful for a very long time,
         if you follow what I'm about to teach you for a week, you'll message me
         on instagram and on the community with your positive results and profit
-        screenshots.
+        screenshots. To Join the exclusive community, send me your proof of
+        payment with the button at the bottom of the page. See you in class!
       </p>
 
       <a href="https://selar.co/derivcashout">
@@ -49,7 +50,9 @@ const DerivCoursePage = () => {
               <button onClick={() => onCopyText("address")}>Copy</button>
             </p>
           </div>
-          <p className="heading" id="network-heading">Amount:</p>
+          <p className="heading" id="network-heading">
+            Amount:
+          </p>
           <div className="flex-container">
             <p className="flex-1" id="amount">
               $100
@@ -58,7 +61,9 @@ const DerivCoursePage = () => {
               <button onClick={() => onCopyText("address")}>Copy</button>
             </p>
           </div>
-          <p className="heading" id="network-heading">Network:</p>
+          <p className="heading" id="network-heading">
+            Network:
+          </p>
           <div className="flex-container">
             <p className="flex-1" id="network">
               TRC20
