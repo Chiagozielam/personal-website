@@ -16,9 +16,12 @@ const DerivCoursePage = () => {
   return (
     <div className="deriv">
       <h1>
-        At last you can learn how I consistently flip deriv accounts, stack
+        {/* At last you can learn how I consistently flip deriv accounts, stack
         positions, and live the successful forex lifestyle of your dreams by
-        trading volatility100 with precision{" "}
+        trading volatility100 with precision{" "} */}
+        Let me show you how I flip Deriv accounts, stack winning trades, and
+        live the forex lifestyle you’ve been dreaming of with precision trading
+        on volatility100!
       </h1>
       <p className="assurance">
         It doesn't matter whether you've been unsuccessful for a very long time,
@@ -28,8 +31,8 @@ const DerivCoursePage = () => {
       </p>
       <p className="assurance-2">
         To Join the exclusive community and participate in the upcoming live
-        session with Shamz on his secret spice appraoch, send me your proof of payment
-        with the button at the bottom of the page. See you in class!
+        session with Shamz on his secret spice appraoch, send me your proof of
+        payment with the button at the bottom of the page. See you in class!
       </p>
 
       <a href="https://selar.co/derivcashout">
