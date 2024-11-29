@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import LandingPage from "./landing page/landingPage";
 import DerivPage from "./deriv page/derivCoursePage";
+import SecocndDerivPage from "./deriv page/secondDerivCoursePage"
 import { BrowserRouter, createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 const router = createBrowserRouter([
@@ -11,7 +12,7 @@ const router = createBrowserRouter([
   },
   {
     path:"/deriv",
-    element: <DerivPage />
+    element: <SecocndDerivPage />
   }
 ]);
 
