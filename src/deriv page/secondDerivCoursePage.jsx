@@ -227,7 +227,7 @@ const SecondDerivCoursePage = () => {
           itemLayout="horizontal"
           dataSource={curriculum}
           renderItem={(item, index) => (
-            <List.Item style={{color: "white"}}>
+            <List.Item style={{color: "white", borderColor: "gray"}}>
               <List.Item.Meta
                 avatar={<YoutubeFilled />}
                 title={<a href="#">{item.title}</a>}
