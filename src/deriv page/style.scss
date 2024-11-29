@@ -143,6 +143,18 @@
       font-weight: 300;
     }
   }
+  .rest-of-body{
+    padding: 2% 12%;
+    h2{
+      color: white;
+    }
+    a{
+      color: rgb(199, 199, 199);
+    }
+    @media screen and (max-width: "500px") {
+      padding: 2% 6%;
+    }
+  }
 }
 
 .course-card{

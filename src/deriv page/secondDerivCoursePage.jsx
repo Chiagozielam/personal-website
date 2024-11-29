@@ -10,7 +10,7 @@ import {
   Space,
   Alert,
 } from "antd";
-import { BookTwoTone, CheckCircleFilled } from "@ant-design/icons";
+import { BookFilled, BookTwoTone, CheckCircleFilled, YoutubeFilled } from "@ant-design/icons";
 import PaymentModal from "./paymentModal";
 import "./style.scss";
 import DanielImg from "../images/profileImg.png";
@@ -27,6 +27,57 @@ const benefitList = [
   {
     title: "Live class with Shamz",
   },
+];
+
+const curriculum = [
+  {
+    title: "Getting Started With This Course",
+  },
+  {
+    title: "What is forex?",
+  },
+  {
+    title: "Different Types of Orders",
+  },
+  {
+    title: "Opening your First Trade",
+  },
+  {
+    title: "Brokers and Why you Need Them",
+  },
+  {
+    title: "Basic Market Terminologies",
+  },
+  {
+    title: "Funding Your Deriv Account",
+  },
+  {
+    title: "Deriv Course pt. 1",
+  },
+  {
+    title: "Deriv Course pt. 2",
+  },
+  {
+    title: "Deriv Course pt. 3",
+  },
+  {
+    title: "Deriv Course pt. 4",
+  },
+  {
+    title: "Deriv Course pt. 5",
+  },
+  {
+    title: "Deriv Course pt. 6",
+  },
+  {
+    title: "Deriv Course pt. 7",
+  },
+  {
+    title: "The Successful Trader",
+  },
+  {
+    title: "The End (Grind Time)"
+  }
 ];
 
 const promoCodes = ["shamz", "danny"];
@@ -46,11 +97,11 @@ const CourseCard = ({ onBuyBtnClick, coursePrice, setCoursePrice }) => {
       });
       setDiscountApplied(true);
       setShowAlert(true);
-      setMessage("10% discount applied!")
+      setMessage("10% discount applied!");
     } else {
       setDiscountApplied(false);
       setShowAlert(true);
-      setMessage("this isn't a valid code")
+      setMessage("this isn't a valid code");
     }
   };
 
@@ -70,7 +121,7 @@ const CourseCard = ({ onBuyBtnClick, coursePrice, setCoursePrice }) => {
             message={discountApplied ? "Success" : "Error"}
             description={message}
             type={discountApplied ? "success" : "error"}
-            style={{marginTop: "4%"}}
+            style={{ marginTop: "4%" }}
             showIcon
             closable
             onClose={() => setShowAlert(false)}
@@ -169,6 +220,22 @@ const SecondDerivCoursePage = () => {
             />
           </Col>
         </Row>
+      </div>
+      <div className="rest-of-body">
+        <h2>Course Content</h2>
+        <List
+          itemLayout="horizontal"
+          dataSource={curriculum}
+          renderItem={(item, index) => (
+            <List.Item style={{color: "white"}}>
+              <List.Item.Meta
+                avatar={<YoutubeFilled />}
+                title={<a href="#">{item.title}</a>}
+                // description="Ant Design, a design language for background applications, is refined by Ant UED Team"
+              />
+            </List.Item>
+          )}
+        />
       </div>
     </div>
   );
