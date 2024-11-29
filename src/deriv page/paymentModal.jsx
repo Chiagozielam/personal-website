@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import { Modal, Row, Col, Button } from "antd";
+import { Modal, Row, Col, Button, Input } from "antd";
 import walletImg from "./wallet.jpg";
 import "./modalStyle.scss";
 
-const PaymentModal = ({ modalOpen, setModalOpen }) => {
+const PaymentModal = ({ modalOpen, setModalOpen, coursePrice }) => {
   const paymentOptionsObj = {
     crypto: "CRYPTO",
     bank: "BANK",
@@ -70,7 +70,7 @@ const PaymentModal = ({ modalOpen, setModalOpen }) => {
               </p>
               <div className="flex-container">
                 <p className="flex-1" id="amount">
-                  $100
+                  ${coursePrice?.usd}
                 </p>
                 <p className="flex-2">
                   <button onClick={() => onCopyText("address")}>Copy</button>
@@ -125,7 +125,7 @@ const PaymentModal = ({ modalOpen, setModalOpen }) => {
                 </p>
                 <div className="flex-container">
                   <p className="flex-1" id="amount">
-                    ₦150,000
+                    ₦{coursePrice?.naira.toLocaleString()}
                   </p>
                   <p className="flex-2">
                     <button onClick={() => onCopyText("amount")}>Copy</button>

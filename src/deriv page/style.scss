@@ -164,6 +164,16 @@
     font-size: 16px;
     font-weight: 500;
   }
+  .promo-container{
+    p{
+      color: rgb(9, 133, 222);
+      font-size: 12px;
+      cursor: pointer;
+      &:hover{
+        color: rgb(5, 97, 163);
+      }
+    }
+  }
   .buy-button{
     background-color: #FE5B02;
     border-color: #FE5B02;

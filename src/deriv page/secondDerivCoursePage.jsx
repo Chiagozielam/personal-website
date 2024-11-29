@@ -1,5 +1,15 @@
 import React, { useState } from "react";
-import { Card, Col, Row, Button, List, Checkbox } from "antd";
+import {
+  Card,
+  Col,
+  Row,
+  Button,
+  List,
+  Checkbox,
+  Input,
+  Space,
+  Alert,
+} from "antd";
 import { BookTwoTone, CheckCircleFilled } from "@ant-design/icons";
 import PaymentModal from "./paymentModal";
 import "./style.scss";
@@ -19,60 +29,120 @@ const benefitList = [
   },
 ];
 
-const promoCodes = ["shamz", "danny"]
+const promoCodes = ["shamz", "danny"];
 
-const CourseCard = ({ onBuyBtnClick }) => (
-  <div className="course-card">
-    <Card
-      hoverable
-      style={{ width: 340 }}
-      cover={<img alt="example" src={CourseImg} />}
-    >
-      <Meta
-        title="Cashout with Deriv"
-        description="Master deriv and financial freedom with Daniel Don"
-      />
-      <p className="price">
-        <span className="main">₦150,000</span>
-        <span className="former">₦200,000</span>
-      </p>
-        <p className="main-usd">$100</p>
-      <Button
-        type="primary"
-        size="large"
-        className="buy-button"
-        onClick={onBuyBtnClick}
+const CourseCard = ({ onBuyBtnClick, coursePrice, setCoursePrice }) => {
+  const [isPromoOpen, setIsPromoOpen] = useState(false);
+  const [promoCode, setPromoCode] = useState("");
+  const [showAlert, setShowAlert] = useState(false);
+  const [message, setMessage] = useState("");
+  const [discountApplied, setDiscountApplied] = useState(false);
+
+  const onApplyPromoCode = () => {
+    if (promoCodes.includes(promoCode.toLowerCase())) {
+      setCoursePrice({
+        naira: 135000,
+        usd: 90,
+      });
+      setDiscountApplied(true);
+      setShowAlert(true);
+      setMessage("10% discount applied!")
+    } else {
+      setDiscountApplied(false);
+      setShowAlert(true);
+      setMessage("this isn't a valid code")
+    }
+  };
+
+  return (
+    <div className="course-card">
+      <Card
+        hoverable
+        style={{ width: 340 }}
+        cover={<img alt="example" src={CourseImg} />}
       >
-        Buy now
-      </Button>
-      <div className="benefits">
-        <p className="heading">This course includes:</p>
-        <List
-          itemLayout="horizontal"
-          dataSource={benefitList}
-          renderItem={(item, index) => (
-            <List.Item>
-              <List.Item.Meta
-                avatar={<CheckCircleFilled />}
-                title={<a href="#">{item.title}</a>}
-                // description="Ant Design, a design language for background applications, is refined by Ant UED Team"
-              />
-            </List.Item>
-          )}
+        <Meta
+          title="Cashout with Deriv"
+          description="Master deriv and financial freedom with Daniel Don"
         />
-      </div>
-    </Card>
-  </div>
-);
+        {showAlert && (
+          <Alert
+            message={discountApplied ? "Success" : "Error"}
+            description={message}
+            type={discountApplied ? "success" : "error"}
+            style={{marginTop: "4%"}}
+            showIcon
+            closable
+            onClose={() => setShowAlert(false)}
+          />
+        )}
+        <p className="price">
+          <span className="main">₦{coursePrice.naira.toLocaleString()}</span>
+          <span className="former">₦200,000</span>
+        </p>
+        <p className="main-usd">${coursePrice.usd}</p>
+
+        <div className="promo-container">
+          <p onClick={() => setIsPromoOpen(!isPromoOpen)}>promo code?</p>
+        </div>
+        {isPromoOpen && (
+          <Space.Compact style={{ width: "100%", marginBottom: "1rem" }}>
+            <Input
+              placeholder="Type Promo code..."
+              onChange={(e) => {
+                setPromoCode(e.target.value);
+              }}
+            />
+            <Button type="primary" onClick={() => onApplyPromoCode()}>
+              Apply
+            </Button>
+          </Space.Compact>
+        )}
+        <Button
+          type="primary"
+          size="large"
+          className="buy-button"
+          onClick={onBuyBtnClick}
+        >
+          Buy now
+        </Button>
+        <div className="benefits">
+          <p className="heading">This course includes:</p>
+          <List
+            itemLayout="horizontal"
+            dataSource={benefitList}
+            renderItem={(item, index) => (
+              <List.Item>
+                <List.Item.Meta
+                  avatar={<CheckCircleFilled />}
+                  title={<a href="#">{item.title}</a>}
+                  // description="Ant Design, a design language for background applications, is refined by Ant UED Team"
+                />
+              </List.Item>
+            )}
+          />
+        </div>
+      </Card>
+    </div>
+  );
+};
 
 const SecondDerivCoursePage = () => {
   const [modalOpen, setModalOpen] = useState(false);
+  const [coursePrice, setCoursePrice] = useState({
+    naira: 150000,
+    usd: 100,
+  });
   const onButtonClick = () => {
     setModalOpen(!modalOpen);
   };
   return (
     <div className="main-deriv-page">
-      <PaymentModal setModalOpen={setModalOpen} modalOpen={modalOpen} />
+      <PaymentModal
+        setModalOpen={setModalOpen}
+        modalOpen={modalOpen}
+        coursePrice={coursePrice}
+      />
       <div className="top-flex-container">
         <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
           <Col span={12} xs={24} lg={12}>
@@ -92,7 +162,11 @@ const SecondDerivCoursePage = () => {
             </p>
           </Col>
           <Col span={12} xs={24} lg={12}>
-            <CourseCard onBuyBtnClick={() => onButtonClick()} />
+            <CourseCard
+              onBuyBtnClick={() => onButtonClick()}
+              coursePrice={coursePrice}
+              setCoursePrice={setCoursePrice}
+            />
           </Col>
         </Row>
       </div>
